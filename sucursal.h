@@ -5,6 +5,8 @@
 #include <string>
 using namespace std;
 
+//Clase Sucursal individual de Ricardo Antonio Cervantes Martínez A01745912.
+
 class Sucursal{
     private: 
         string direccion;
@@ -24,11 +26,13 @@ class Sucursal{
             horario = h;
         }
         void desplegar_datos(){
-            cout << "\nDatos de la sucursal.\n" << endl;
+
+            cout << "\nDATOS DE LA SUCURSAL.\n" << endl;
             cout << "El local esta en: " << direccion << endl;
             cout << "El titular de la sucursal es: " << titular_sucursal << endl;
             cout << "El horario de la sucursal es: " << horario << endl;
             cout << "Esta disponible el producto: " << si_producto << endl;
+            cin.ignore(32767,'\n');
         }
         void seleccionar_sucursal(){
             string dir;

@@ -2,12 +2,13 @@
 #include "destinatario.h"
 #include "producto.h"
 
-#ifndef COMPRA_C
-#define COMPRA_C
-
 #include <iostream>
 #include <string>
 using namespace std;
+
+//Proyecto Integrador - Equipo 4 
+//Ricardo Antonio Cervantes Martínez A01745912 
+//Josué Bernardo Villegas Nuño A01751694
 
 class Compra {
     private: 
@@ -51,5 +52,3 @@ class Compra {
             cout << "\n¿El producto esta confirmado?: " << to_string(producto_confirmar) << endl;
         }
 };
-
-#endif COMPRA_C

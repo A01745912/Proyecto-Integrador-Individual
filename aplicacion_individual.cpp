@@ -9,9 +9,7 @@
 #include <string>
 using namespace std;
 
-//Proyecto Integrador - Equipo 4 
-//Ricardo Antonio Cervantes Martínez A01745912 
-//Josué Bernardo Villegas Nuño A01751694
+//Aplicacion con la clase Sucursal de Ricardo Antonio Cervantes Martínez A01745912. 
 
 int main(){
     Usuario u1;
@@ -23,9 +21,9 @@ int main(){
     string afirmacion = "Si";
 
     while ((afirmacion == "Si")||(afirmacion=="si")){
-        cout << "¡BIENVENIDO A LA TIENDA EN LINEA!" << endl;
+        cout << "¡Bienvenido a la tienda en linea!" << endl;
         cout << "\nRegistrese para poder elegir su compra." << endl;
-        cout << "PULSE ENTER PARA PODER CONTINUAR." << endl;
+        cout << "Pulse enter para continuar." << endl;
         cin.ignore(32767,'\n');
 
         cout << "\n¿Quiere registrar sus datos?"; cin >> afirmacion;
@@ -40,10 +38,28 @@ int main(){
         }
         
         cout << "\nIngrese los datos de la marca." << endl;
-        cout << "\nPULSE ENTER PARA PODER CONTINUAR." << endl;
+        cout << "\nPulse enter para continuar." << endl;
         cin.ignore(32767,'\n');
         m1.datos_mercado();
         m1.desplegar_datos();
+
+        cout << "\nIngrese los datos de la sucursal." << endl;
+        cout << "\nPulse enter para continuar." << endl;
+        cin.ignore(32767,'\n');
+        s1.seleccionar_sucursal();
+
+        cout << "\nPresione enter para continuar." << endl;
+
+        cout << "\n¿Esta disponivble el producto?"; cin >> afirmacion;
+        if ((afirmacion == "Si")||(afirmacion=="si")){
+            s1.existencia_producto();
+        }
+
+        cout << "\n¿Quiere corroborar sus datos?"; cin >> afirmacion;
+        if ((afirmacion == "Si")||(afirmacion=="si")){
+            m1.desplegar_sucursal(s1).desplegar_datos();
+        }
+
 
         cout << "\nAhora ingrese los datos del producto a comprar." << endl;
         p1.insertar_datos();
@@ -59,7 +75,7 @@ int main(){
         if ((afirmacion == "Si")||(afirmacion=="si")){
             comp1.confirmar_producto();
             
-            cout << "\nPROCEDA A PAGAR." << endl;
+            cout << "\nProceda a pagar." << endl;
             cout << "\n¿Quiere pagar con tarjeta?"; cin >> afirmacion;
             if ((afirmacion == "Si")||(afirmacion=="si")){
                 u1.pago_con_tarjeta();
